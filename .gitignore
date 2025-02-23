@@ -1,0 +1,11 @@
+# Ignore compiled Java class files
+/bin/
+
+# Ignore Eclipse-specific files
+.project
+.settings/
+
+# Ignore dependency libraries (if using Maven or Gradle)
+
+# Ignore build output directories
+/target/

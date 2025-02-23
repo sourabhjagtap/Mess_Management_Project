@@ -14,7 +14,7 @@ public class UserProfile extends JFrame implements ActionListener {
     private JButton back;
     private JLabel UserId, userName, adrs, email, phoNo, preference;
     int u_id;
-    String name,username,mail,phone,address;
+    String name,username,mail,phone,address,user_pref;
     
     
     public UserProfile(int userId) {
@@ -36,6 +36,9 @@ public class UserProfile extends JFrame implements ActionListener {
         		mail=rs.getString(4);
         		phone=rs.getString(5);
         		username=rs.getString(6);
+        		user_pref=rs.getString(9);
+        		
+        		
         	}
 			
 		} catch (SQLException e1) {
@@ -100,7 +103,7 @@ public class UserProfile extends JFrame implements ActionListener {
         add(lblpreference);
 
         // Preference field
-        preference = new JLabel("-");
+        preference = new JLabel(user_pref);
         preference.setForeground(Color.RED);
         preference.setBounds(250, 220, 70, 20);
         add(preference);
